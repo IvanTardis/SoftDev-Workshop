@@ -1,3 +1,9 @@
+Ivan Gontchar
+Belugas
+SoftDev
+K03 -- Reviewing python lists
+2024-09-12
+
 def string_times(str, n):
   return str * n
 

@@ -7,17 +7,31 @@
 import random
 
 file = open("krewes.txt", "r")
-info = file.read()
-print(info)
-for i in range(len(info)):
-    
+info = file.read().strip()
+#print(info)
+perPerson = info.split("@@@")
+#print(perPerson)
+
+per4 = []
+per5 = []
+
+for i in perPerson:
+    x = i.split("$$$")
+    #print(x)
+    if x[0] == '4':
+        per4.append(x[1:])
+    else:
+        per5.append(x[1:])
+
+#print(per4)
+#print(per5)
 
 krewes = {
-    4: [],
-    5: []
+    4: per4,
+    5: per5
 }
 
+print(krewes)
 
-
-value = random.choice(list(krewes.values()))
-print(random.choice(value))
+#value = random.choice(list(krewes.values()))
+#print(random.choice(value))

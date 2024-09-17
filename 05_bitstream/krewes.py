@@ -34,10 +34,8 @@ krewes = {
 #print(krewes)
 
 periodChoice = random.choice(list(krewes.keys()))
-print(periodChoice)
+#print(periodChoice)
 personChoice = random.choice(list(krewes[periodChoice]))
-print(personChoice)
+#print(personChoice)
 
-value = random.choice(list(krewes.values()))
-#print(list(krewes.values()))
-#print(random.choice(value))
+print(personChoice[0] + " of period " + str(periodChoice) + " and their friend " + personChoice[1])

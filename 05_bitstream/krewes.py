@@ -31,7 +31,13 @@ krewes = {
     5: per5
 }
 
-print(krewes)
+#print(krewes)
 
-#value = random.choice(list(krewes.values()))
+periodChoice = random.choice(list(krewes.keys()))
+print(periodChoice)
+personChoice = random.choice(list(krewes[periodChoice]))
+print(personChoice)
+
+value = random.choice(list(krewes.values()))
+#print(list(krewes.values()))
 #print(random.choice(value))

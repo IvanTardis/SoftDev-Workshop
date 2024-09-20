@@ -33,4 +33,14 @@ for i in range(1, len(arr[1:len(arr)-1])):
         y = [x[0], float(x[1])]
         total += y[1]
         dict[total] = y
-pprint.pp(dict)
+#pprint.pp(dict)
+x = random.random() * 99.8;
+choice = [];
+temp = list(dict.keys())
+for i in temp:
+    if(i > x):
+        choice = dict.get(i)
+        break
+#print(x)
+#print(choice)
+print("The industry you got is " + choice[0] + ", that takes up ", choice[1], "% of the job market.")

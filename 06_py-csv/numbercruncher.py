@@ -11,6 +11,7 @@ HOW THIS SCRIPT WORKS
 '''
 
 import random
+import pprint
 
 with open("occupations.csv", "r") as file:
     f = file.read()
@@ -18,7 +19,7 @@ arr = f.split("\n")
 #print(arr)
 dict = {}
 total = 0
-for i in range(len(arr[1:len(arr)-1])):
+for i in range(1, len(arr[1:len(arr)-1])):
     if arr[i][0] == '\"':
         x = arr[i].split("\",")
         #print(arr[i].split("\","))
@@ -28,4 +29,8 @@ for i in range(len(arr[1:len(arr)-1])):
         dict[total] = y
     else:
         x = arr[i].split(",")
-print(dict)
+        #print(x)
+        y = [x[0], float(x[1])]
+        total += y[1]
+        dict[total] = y
+pprint.pp(dict)

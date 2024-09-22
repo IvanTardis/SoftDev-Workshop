@@ -15,9 +15,9 @@ run "deactivate" when wanted
 now you can use virtual machine wherever you are
 
 QCC:
-0.
-1.
-2.
+0. This syntax kind of reminded me of Java, especially when you open a file and you do something like "File x = new File(fileName.extension)"
+1. The major point of reference for '/' is in terminal and it is used for direectory, particularly the root directory
+2. This will print
 3.
 4.
 5.

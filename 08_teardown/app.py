@@ -5,7 +5,7 @@ DISCO:
 <note any discoveries you made here... no matter how small!>
 Some modules are not part of the standard library
 pip = "pip installs python": command for downloading more packages from terminal
-"$pip install flask": will fail at start or during install bc of machine "rules"
+"$pip install flask": will fail at start or during install bc of machine
 run "$python3 -m venv foo"
 can do "l;" or maybe "ls-al" to see foo folder
 cd into it and see that it has a virtual python environment
@@ -15,12 +15,12 @@ run "deactivate" when wanted
 now you can use virtual machine wherever you are
 
 QCC:
-0. 
-1. 
-2. 
-3. 
-4. 
-5. 
+0.
+1.
+2.
+3.
+4.
+5.
  ...
 
 INVESTIGATIVE APPROACH:
@@ -40,6 +40,3 @@ def hello_world():
     return "No hablo queso!"             # Q4: Will this appear anywhere? How u know?
 
 app.run()                                # Q5: Where have you seen similar constructs in other languages?
-
-
-

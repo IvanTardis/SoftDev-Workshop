@@ -11,5 +11,5 @@ def hello_world():
     print(__name__)                   #where will this go? In terminal
     return "No hablo queso!"
 
-app.debug = True
+app.debug = True # This turns on debugger mode in terminal
 app.run()

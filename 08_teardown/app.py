@@ -22,10 +22,10 @@ now you can use virtual machine wherever you are
 QCC:
 0. This syntax kind of reminded me of Java, especially when you open a file and you do something like "File x = new File(fileName.extension)"
 1. The major point of reference for '/' is in terminal and it is used for direectory, particularly the root directory
-2. This will print in the terminal after you quit.
+2. This will print in the terminal when you visit the link.
 3. It will print "__main__"
 4. It will appear in the http link that is provided in the terminal. I kind of accidentally stumbled upon it, but also you can kind of assume that the route command is used to route the output elsewhere, which is why I clicked the link.
-5. This simply reminds me of java or python.
+5. This simply reminds me of java calling a function.
  ...
  Why does the "print(__name__)" print after quitting the function?
  So what exactly does .route establish? Is a temporary file setup somewhere, because I could not find any in the total root directory or in the folder it was in?

@@ -27,7 +27,7 @@ QCC:
 4. It will appear in the http link that is provided in the terminal. I kind of accidentally stumbled upon it, but also you can kind of assume that the route command is used to route the output elsewhere, which is why I clicked the link.
 5. This simply reminds me of java calling a function.
  ...
- Why does the "print(__name__)" print after quitting the function?
+ Why does the "print(__name__)" print after quitting the function? Update: On school lab computers, it prints when link is visited.
  So what exactly does .route establish? Is a temporary file setup somewhere, because I could not find any in the total root directory or in the folder it was in?
 
 

@@ -29,14 +29,14 @@ QCC:
  ...
  Why does the "print(__name__)" print after quitting the function?
  So what exactly does .route establish? Is a temporary file setup somewhere, because I could not find any in the total root directory or in the folder it was in?
- 
+
 
 INVESTIGATIVE APPROACH:
 <Your concise summary of how
  you and your team set about
  "illuminating the cave of ignorance" here...>
  I first tried my best to read through the code as best I could, to find any similarities with things I may have
- seen in the best, and roughly understand the idea of what I am looking at. After running the code in the terminal
+ seen in the past, and roughly understand the idea of what I am looking at. After running the code in the terminal
  several times, to observe behavior, I investigated the link. After I got all I thought I could get from the
  immediate info in front of me, I looked up Flask documentation, so I could get an actual description of the
  individual functions.

@@ -44,4 +44,4 @@ def maker():
             break
     #print(x)
     #print(choice)
-    print("The industry you got is " + choice[0] + ", that takes up ", choice[1], "% of the job market.")
+    return "The industry you got is " + choice[0] + ", that takes up ", choice[1], "% of the job market."

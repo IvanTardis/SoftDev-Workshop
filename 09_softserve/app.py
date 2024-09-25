@@ -19,7 +19,7 @@ def hello_world():
     # SoftDev<br>
     # K09 -- Putting it Together<br>
     # 2024-09-24<br>
-    # time spent: 1 hour<br><br>''' + numbercruncher.maker()
+    # time spent: 1 hour<br><br><b>''' + numbercruncher.maker()
 
 if __name__ == "__main__":      # true if this file NOT imported
     app.debug = True            # enable auto-reload upon code change

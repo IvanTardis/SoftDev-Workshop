@@ -14,6 +14,7 @@ import random
 import pprint
 
 def maker():
+    returner = "The industry you got is "
     with open("occupations.csv", "r") as file:
         f = file.read()
     arr = f.split("\n")
@@ -44,4 +45,9 @@ def maker():
             break
     #print(x)
     #print(choice)
-    return "The industry you got is " + choice[0] + ", that takes up ", choice[1], "% of the job market."
+    returner += choice[0]
+    returner += ", that takes up " + str(choice[1]) + "% of the job market." + f
+    #print("The industry you got is " + choice[0] + ", that takes up", choice[1], "% of the job market.")
+    return returner
+
+maker()

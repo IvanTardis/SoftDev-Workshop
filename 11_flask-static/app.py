@@ -1,6 +1,9 @@
-# Clyde 'Thluffy' Sinclair
+# Ivan Gontchar
+# Ice Broken(Tanzeem Hasan, Colyi Chen)
 # SoftDev
-# Sep 2024
+# K09 -- Putting it Together
+# 2024-09-24
+# time spent: 1 hour
 
 # DEMO
 # basics of /static folder
@@ -14,13 +17,11 @@ def hello_world():
     print(__name__)
     return "No hablo queso!"
 
-'''
 @app.route("/static/foo.html")
 def h():
     print("the __name__ of this module is... ")
     print(__name__)
     return str(random.random())
-'''
 
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change

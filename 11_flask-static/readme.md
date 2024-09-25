@@ -31,6 +31,15 @@ path/to/myworkshop$ tree 11_flask-static
 
 <br>
 
+Notes:
+- "foo" is just a plaintext file, no HTML or any code, based on the wiki, this is just a file where code is broken down into only readable materials
+- foo.html has some actual html tags, and a proper "header" on top
+- there are 2 routes and 2 functions
+Predictions:
+
+QCCs:
+
+
+
 [related](https://ukulelemagazine.com/lessons/uke-lesson-3-chords-and-the-truth-country-songwriting-legend-harlan-howard)  
 [related](https://en.wikipedia.org/wiki/Plain_text)  
-

@@ -1,8 +1,8 @@
 # Ivan Gontchar
-# Ice Broken(Tanzeem Hasan, Colyi Chen)
+# Belugas(Tanzeem Hasan, Colyi Chen)
 # SoftDev
-# K09 -- Putting it Together
-# 2024-09-24
+# K11: Some Things Never Change
+# 2024-09-26
 # time spent: 1 hour
 
 # DEMO

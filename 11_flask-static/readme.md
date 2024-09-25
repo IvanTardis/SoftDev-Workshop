@@ -46,8 +46,6 @@ Actual behavior:
 - I was right.
 - EXTRA ABOUT THE COMMMENTED OUT CODE: I was correct in the prediction of the behavior
 
-QCCs:
-
 
 
 [related](https://ukulelemagazine.com/lessons/uke-lesson-3-chords-and-the-truth-country-songwriting-legend-harlan-howard)  

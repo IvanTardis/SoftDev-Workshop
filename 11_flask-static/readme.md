@@ -35,10 +35,12 @@ Notes:
 - "foo" is just a plaintext file, no HTML or any code, based on the wiki, this is just a file where code is broken down into only readable materials
 - foo.html has some actual html tags, and a proper "header" on top
 - there are 2 routes and 2 functions
+
 Predictions:
 - I think accessing foo will cause just the text of the file to be shown, since there is no route to change the output, and no code in the file to format or anything
 - Similar to my prediction for foo, I think the file will be accessed, and since there is actual html code, the text inside the html tags, "Is this plaintext, though?" will be printed on the webpage
 - EXTRA ABOUT THE COMMMENTED OUT CODE: I think accessing foo.html, with the code block uncommented, will cause a random decimal between 0.0 and 1.0 to be printed, since Mr.Mykolyk said that the route will execute the function when the file path is accessed, so when you go to static/foo.html, it triggers the function, which will print "the __name__ of this module is... __main__" in the terminal, and will print the random decimal on the webpage
+
 Actual behavior:
 - I was wrong, it actually downloads the foo file to my downloads folder when I go to that link
 - I was right.

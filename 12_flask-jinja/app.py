@@ -5,10 +5,11 @@
 """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Q0:
-<your response here>
+It should give an error because it will not know what render_template is
+without importing the library.
 
 Q1:
-<your response here>
+Yes, we all realize it will load on http://127.0.0.1:5000/my_foist_template
 
 Q2:
 <your response here>
@@ -29,16 +30,17 @@ def hello_world():
     return "No hablo queso!"
 
 coll = [0,1,1,2,3,5,8]
+x = 0
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Q1: Can all of your teammates confidently predict the URL to use to load this page?
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@app.route("/my_foist_template") 
+@app.route("/my_foist_template")
 def test_tmplt():
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Q2: What is the significance of each argument? Simplest, most concise answer best.
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    return render_template( 'model_tmplt.html', foo="fooooo", collection=coll)
+    return render_template( 'model_tmplt.html', foo="fooooo", collection=coll, xStor=x)
 
 
 if __name__ == "__main__":

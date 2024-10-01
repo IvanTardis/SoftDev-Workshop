@@ -3,7 +3,7 @@
 # SoftDev
 # K13 - Template for Success
 # Sep 2024
-# time spent:
+# time spent: 1 hour
 '''DISCO:
 
 QCC:'''

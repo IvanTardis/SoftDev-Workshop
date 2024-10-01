@@ -9,7 +9,6 @@
 QCC:'''
 
 from flask import Flask, render_template
-import numbercruncher
 import random
 app = Flask(__name__)
 
@@ -24,15 +23,21 @@ def maker():
     for i in range(1, len(arr[1:len(arr)-1])):
         if arr[i][0] == '\"':
             x = arr[i].split("\",")
+            temp = x[1].split(",")
+            #print(temp)
+            x[1] = temp[0]
+            x.append(temp[1])
+            #print(x)
             #print(arr[i].split("\","))
             #total += int(x[1])
-            y = [x[0][1:], float(x[1])]
+            y = [x[0][1:], float(x[1]), x[2]]
+            #print(y)
             total += y[1]
             dict[total] = y
         else:
             x = arr[i].split(",")
             #print(x)
-            y = [x[0], float(x[1])]
+            y = [x[0], float(x[1]), x[2]]
             total += y[1]
             dict[total] = y
     #pprint.pp(dict)
@@ -56,21 +61,29 @@ def hello_world():
 
 with open("data/occupations.csv", "r") as file:
     f = file.read()
-arr = f.split("\n")
-for i in range(len(arr) -1 ):
-    if arr[i][0] == '\"':
-        arr[i] = arr[i].split("\",")
-        #print(arr[i].split("\","))
-        #total += int(x[1])
-        #y = [x[0][1:], float(x[1])]
-        #total += y[1]
-        #dict[total] = y
-    else:
-        arr[i] = arr[i].split(",")
-        #print(x)
-        #y = [x[0], float(x[1])]
-        #total += y[1]
-        #dict[total] = y
+    arr = f.split("\n")
+    #print(arr)
+    dict = {}
+    total = 0
+    for i in range(len(arr)-1):
+        #print(arr)
+        #print(arr[i])
+        if arr[i][0] == '\"':
+            x = arr[i].split("\",")
+            temp = x[1].split(",")
+            #print(temp)
+            x[1] = temp[0]
+            x.append(temp[1])
+            #print(x)
+            #print(arr[i].split("\","))
+            #total += int(x[1])
+            arr[i] = [x[0][1:], x[1], x[2]]
+            #print(y)
+        else:
+            x = arr[i].split(",")
+            #print(x)
+            arr[i] = [x[0], x[1], x[2]]
+
 
 @app.route("/wdywtbwygp")
 def test_tmplt():

@@ -46,9 +46,7 @@ def maker():
     #print(x)
     #print(choice)
     returner += choice[0]
-    returner += ", that takes up " + str(choice[1]) + "% of the job market.</b><br><br>"
-    for i in arr:
-        returner += i + "<br>"
+    returner += ", that takes up " + str(choice[1]) + "% of the job market."
     #print("The industry you got is " + choice[0] + ", that takes up", choice[1], "% of the job market.")
     return returner
 

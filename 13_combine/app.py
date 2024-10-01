@@ -41,6 +41,7 @@ def test_tmplt():
         title="Random Occupation",
         header="Choosing Occupation from Table",
         TNPG="Flying Fire Belugas: Ivan, Tanzeem, Jason",
+        randChoice=numbercruncher.maker(),
         file=arr)
 
 

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <style>
+  table, th, td {
+    border: 1px solid black;
+  }
+  </style>
   <head>
     <title> {{ title }} </title>
   </head>
   <body>
     <h1> {{ header }} </h1>
-    <p>{{ TNPG }}</p>
+    <p>{{ TNPG }}<br><br>
+      <b>{{randChoice}}</b>
+    </p>
     <table>
       {% for row in file %}
         <tr>

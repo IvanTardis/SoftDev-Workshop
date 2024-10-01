@@ -16,7 +16,7 @@ app = Flask(__name__)
 def hello_world():
     return numbercruncher.maker()
 
-with open("occupations.csv", "r") as file:
+with open("data/occupations.csv", "r") as file:
     f = file.read()
 arr = f.split("\n")
 for i in range(len(arr) -1 ):
@@ -37,7 +37,7 @@ for i in range(len(arr) -1 ):
 @app.route("/wdywtbwygp")
 def test_tmplt():
     print(arr)
-    return render_template( 'occupations.html',
+    return render_template( 'tablified.html',
         title="Random Occupation",
         header="Choosing Occupation from Table",
         TNPG="Flying Fire Belugas: Ivan, Tanzeem, Jason",
@@ -46,5 +46,5 @@ def test_tmplt():
 
 
 if __name__ == "__main__":
-    app.debug = False
+    app.debug = True
     app.run()

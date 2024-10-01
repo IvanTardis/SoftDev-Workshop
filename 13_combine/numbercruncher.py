@@ -15,7 +15,7 @@ import pprint
 
 def maker():
     returner = "The industry you got is "
-    with open("occupations.csv", "r") as file:
+    with open("data/occupations.csv", "r") as file:
         f = file.read()
     arr = f.split("\n")
     #print(arr)

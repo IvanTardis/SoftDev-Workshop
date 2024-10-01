@@ -36,6 +36,7 @@ for i in range(len(arr) -1 ):
 
 @app.route("/wdywtbwygp")
 def test_tmplt():
+    print(arr)
     return render_template( 'occupations.html',
         title="Random Occupation",
         header="Choosing Occupation from Table",

@@ -6,12 +6,14 @@
   <body>
     <h1> {{ header }} </h1>
     <p>{{ TNPG }}</p>
-    {% for row in file %}
-      <tr>
-        {% for item in row%}
-          <th> {{item}} </th>
-        {% endfor %}
-      </tr>
-    {% endfor %}
+    <table>
+      {% for row in file %}
+        <tr>
+          {% for item in row%}
+            <td> {{item}} </td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+  </table>
   </body>
 </html>

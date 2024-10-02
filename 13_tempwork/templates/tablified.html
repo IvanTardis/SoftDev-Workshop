@@ -23,11 +23,16 @@
       <b>{{randChoice}}</b>
     </p>
     <table>
+      <tr>
+        {% for label in topper%}
+          <th>{{label}}</th>
+        {% endfor %}
+      </tr>
       {% for row in file %}
         <tr>
           <td> {{row[0]}} </td>
           <td> {{row[1]}} </td>
-          <td> {{row[2]}} </td>
+          <td><a href={{row[2]}}>{{row[2]}}</a></td>
           <!-- {% for item in row %}
             <td> {{item}} </td>
           {% endfor %} -->

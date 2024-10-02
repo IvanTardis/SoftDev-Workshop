@@ -62,10 +62,12 @@ def hello_world():
 with open("data/occupations.csv", "r") as file:
     f = file.read()
     arr = f.split("\n")
+    arr = arr[:-1]
+    print(arr)
     #print(arr)
     dict = {}
     total = 0
-    for i in range(len(arr)-1):
+    for i in range(len(arr)):
         #print(arr)
         #print(arr[i])
         if arr[i][0] == '\"':
@@ -83,6 +85,7 @@ with open("data/occupations.csv", "r") as file:
             x = arr[i].split(",")
             #print(x)
             arr[i] = [x[0], x[1], x[2]]
+            print(arr[i])
 
 
 @app.route("/wdywtbwygp")
@@ -93,7 +96,8 @@ def test_tmplt():
         header="Choosing Occupation from Table",
         TNPG="Flying Fire Belugas: Ivan, Tanzeem, Jason",
         randChoice=maker(),
-        file=arr)
+        topper=arr[0],
+        file=arr[1:])
 
 
 if __name__ == "__main__":

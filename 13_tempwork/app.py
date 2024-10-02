@@ -63,7 +63,7 @@ with open("data/occupations.csv", "r") as file:
     f = file.read()
     arr = f.split("\n")
     arr = arr[:-1]
-    print(arr)
+    #print(arr)
     #print(arr)
     dict = {}
     total = 0
@@ -85,7 +85,7 @@ with open("data/occupations.csv", "r") as file:
             x = arr[i].split(",")
             #print(x)
             arr[i] = [x[0], x[1], x[2]]
-            print(arr[i])
+            #print(arr[i])
 
 
 @app.route("/wdywtbwygp")

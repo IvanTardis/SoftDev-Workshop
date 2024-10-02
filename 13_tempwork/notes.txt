@@ -1,8 +1,31 @@
-DISCO:
--
+NOTES:
+- Overall we think the task was pretty straightforward, especially with how the prior tasks/lessons introduced
+  us to all the concepts we would need to complete this one.
+- We wondered if there is an alternate, or maybe "optimal" way to do this task. We noticed that pretty much the only
+  way for us to move on to get the link in its specific tag was to break down the process and remove some of the
+  "automation" we had by using the 2nd for loop. Is there another way that would be better? Also is there a way to use
+  if statements or other more traditional code writing practices? I guess this stems into a question that we will put as
+  3rd in the QCC
 
 EGO:
--
+- My trio did not have time to discuss this article together but here are some of my thoughts/ponderings
+- I have definitely noticed that at times I could get personally invested in my code, where if someone presented an
+  alternative I may have been wary, maybe because I grew attached to what I had developed. But, for the most part,
+  I would say that my CS "mentors" such as my teachers, have always shown necessity for keeping an open mind and
+  at the very least testing your code very thoroughly, because it should be easy to own up to making a "mistake".
+- However this practice, as I was reading, was a very new and different idea. It does seem really beneficial and a
+  great way to improve on working. The idea of Bill G. going around and telling everyone about the bugs in his code,
+  read almost idealistic to me, and not sure if that is somewhere I can get soon but it seems awesome. I feel like
+  part of the problem is me default writing "his code", and I chose to leave it because it is what the reading
+  advocates against, which is making code a group effort and not seeing the code as one person's.
+- One of the big questions that came to my mind while reading this was how does one get started in creating this tight-knit
+  group? I think the bond of such a group is awesome, and the value that it adds to the quality of coding produced is
+  incredibly useful, but I was still wondering how to form such a group? Do you try to get as many people as you can
+  "recruited" for this cause at the first place where you can do so?
 
 QCC:
--
+- Is there a "most optimal" way to do this?
+- Is there a way to use if statements or other more traditional code writing practices?
+- What is the code in the "{%...%}"? Is this some kind of notation that puts Python on the inside? We assume not, since
+  the "{% endfor %}" is not part of Python. If not, then what coding language is this? Where can we find a reference for this?
+  Should we expect to use this on higher levels than a for-loop in the future?

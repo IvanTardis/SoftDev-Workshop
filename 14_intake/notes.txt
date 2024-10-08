@@ -6,9 +6,9 @@
 # time spent: 1 hour
 
 DISCO:
-*
-*
-*
+* Commented code in first route gives errors
+* Commented code in auth route does not change anything visually on the webpage, but puts a lot of information in the console
+* 
 -----------------------------------------------------------------------
 
 

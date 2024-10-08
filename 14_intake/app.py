@@ -1,6 +1,10 @@
-# Clyde 'Thluffy' Sinclair
+# Ivan Gontchar
+# Flying Fire Belugas(Ivan, Tanzeem, Jason)
 # SoftDev
-# October 2024
+# K14 - Who Do Forms Work For?
+# 2024-10-07
+# time spent: 1 hour
+
 
 # import conventions:
 # list most general first (standard python library)
@@ -24,7 +28,7 @@ trioTASK:
 ~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
 ...read for understanding all of the code below.
  * Some will work as written;
- *  ...other sections will not. 
+ *  ...other sections will not.
 
 TASK:
  Predict which.
@@ -71,8 +75,8 @@ def authenticate():
     return "Waaaa hooo HAAAH"  #response to a form submission
 
 
-    
+
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
-    app.debug = True 
+    app.debug = True
     app.run()

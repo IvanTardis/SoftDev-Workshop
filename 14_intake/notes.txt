@@ -7,13 +7,15 @@
 
 DISCO:
 * Commented code in first route gives errors
-* Commented code in auth route does not change anything visually on the webpage, but puts a lot of information in the console
-* 
+* Commented code in auth route does not change anything visually on the webpage, but puts a lot of
+  information in the console
+* If you import a Python program, it automatically runs anything that isn't in a function.
 -----------------------------------------------------------------------
 
 
 Q/C/C:
-*
+* What is the difference between GET and POST in general, and how do they affect
+  the Flask webpage?
 *
 *
 -----------------------------------------------------------------------

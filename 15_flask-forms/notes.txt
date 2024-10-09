@@ -1,0 +1,26 @@
+# Ivan Gontchar
+# Sky-High-Flyers (Ivan, Colyi, Jason)
+# SoftDev
+# K15 - Take & Give
+# 2024-10-08
+# time spent: 1 hour
+
+DISCO:
+* POST stored to request.form
+* GET stored to request.get
+* can use request.method to see if GET or POST was used
+-----------------------------------------------------------------------
+
+
+Q/C/C:
+* Are there other submission methods besides GET and POST?
+*
+*
+-----------------------------------------------------------------------
+
+
+OTHER?
+*
+*
+*
+-----------------------------------------------------------------------

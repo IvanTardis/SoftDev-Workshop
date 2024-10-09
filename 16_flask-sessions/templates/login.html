@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+  # Ivan Gontchar
+  # Belugas (Ivan, Colyi, Tanzeem)
+  # SoftDev
+  # K16: Take and Keep
+  # 2024-10-09
+  # time spent: tbd
+
+     simple demo of HTML forms via Flask
+
+     trioTASK:
+     If any member of team has forms experience, let their know-how OSMOTE.
+     If no one does, seek external assistance.
+
+     PROTIP: Revisit code from foundations if you have it.
+     Peruse this code together and discuss how it should work,
+       in conjunction with the back end apparatus.
+ -->
+
+
+<html>
+
+  <head>
+    <title> LOGIN PAGE </title>
+  </head>
+
+  <body>
+    <h2>
+      Ivan Gontchar<br>
+      Belugas (Ivan, Colyi, Tanzeem)<br>
+      SoftDev<br>
+      K16: Take and Keep<br>
+      2024-10-09<br>
+      time spent: tbd<br>
+    </h2>
+    <h1>
+      Howdy user!
+    </h1>
+
+
+    <h3>
+      Enter your username below to proceed with GET.
+    </h3>
+    <form action="/auth" method="GET">
+      <input type="text" name="username">
+      <input type="submit" name="sub1">
+    </form>
+    <h3>
+      Enter your username below to proceed with POST.
+    </h3>
+    <form action="/auth" method="POST">
+      <input type="text" name="username">
+      <input type="submit" name="sub1">
+    </form>
+    <br>
+  </body>
+
+</html>

@@ -1,9 +1,9 @@
-# Ivan Gontchar
-# Sky-High-Flyers (Ivan, Colyi, Jason)
-# SoftDev
-# K15 - Take & Give
-# 2024-10-08
-# time spent: 1 hour
+  # Ivan Gontchar
+  # Belugas (Ivan, Colyi, Tanzeem)
+  # SoftDev
+  # K16: Take and Keep
+  # 2024-10-09
+  # time spent: tbd
 
 from flask import Flask, render_template, request
 

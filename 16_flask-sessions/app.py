@@ -5,7 +5,7 @@
   # 2024-10-09
   # time spent: tbd
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 
 app = Flask(__name__)    #create Flask object
 
@@ -25,6 +25,7 @@ def disp_loginpage():
     # print(request.headers)
     return render_template( 'login.html' ) # We predict this will work, and will simply render the template login.html
 
+app.secret_key = "1234";
 
 @app.route(("/auth") , methods=['GET', 'POST'])
 def authenticate():
@@ -39,12 +40,15 @@ def authenticate():
     # print(request.args['username'])
     # print("***DIAG: request.headers ***")
     # print(request.headers)
-    #return "HEYO"
+    session['username'] = request.args['username']
+    print(request.cookies.get('username'))
+
+    # return request.cookies.get('username')
     if request.method == 'GET':
-        return "<h2>Ivan Gontchar<br>Sky-High-Flyers (Ivan, Colyi, Jason)<br>SoftDev<br>K15 - Take & Give<br>2024-10-08<br>time spent: 1 hour</h2>HEYO!<br>You just submitted \"" + request.args['username'] + "\" via GET. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
+        return "<h2>Ivan Gontchar<br>Sky-High-Flyers (Ivan, Colyi, Jason)<br>SoftDev<br>K15 - Take & Give<br>2024-10-08<br>time spent: 1 hour</h2>HEYO!<br>You just submitted \"" + session['username'] + "\" via GET. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
     else:
-        return "<h2>Ivan Gontchar<br>Sky-High-Flyers (Ivan, Colyi, Jason)<br>SoftDev<br>K15 - Take & Give<br>2024-10-08<br>time spent: 1 hour</h2>HEYO!<br>You just submitted \"" + request.form['username'] + "\" via POST. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
-    #return "Your input: " + request.form['username'] + "<br>"  #response to a form submission
+        return "<h2>Ivan Gontchar<br>Sky-High-Flyers (Ivan, Colyi, Jason)<br>SoftDev<br>K15 - Take & Give<br>2024-10-08<br>time spent: 1 hour</h2>HEYO!<br>You just submitted \"" + session['username'] + "\" via POST. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
+    return "Your input: " + request.form['username'] + "<br>"  #response to a form submission
 
 
 

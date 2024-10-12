@@ -37,9 +37,9 @@ def login():
         # was equivalent to request.form, based on the notes, however, this prints
         # "None". Perhaps the notes implied that by function it would be the same
         # but there are extra steps to set up the cookies
-        #print(request.cookies.get('username'))
+        # print(request.cookies.get('username'))
 
-        #print(session['username'])
+        # print(session['username'])
 
         # since user inputed something, send them to the response page
         return redirect(url_for('response'))

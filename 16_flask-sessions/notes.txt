@@ -5,31 +5,86 @@
 # 2024-10-09
 # time spent: tbd
 
-NOTES:
+PLAN/THOUGHTS WHILE CODING:
 * Default is returning the render template which occurs when we have get.
-After default method is called, redirect might actually return something
-but as of right now, calling it first will lead to a method not allowed.
-Neither case of index() is triggered when we're redirected to "/".
-What we want right now is to figure out when redirecting to "/" will
-actually cause something to happen.
-Does that imply that render template has to be called first, and then
-after that, the redirect might be feasible?
-What if we have a button to redirect after we are logged in.
-"John is logged in" followed by button that calls the function redirect()
-again, and this time it shows the user is logged in on the homepage as well?
-*
+  After default method is called, redirect might actually return something
+  but as of right now, calling it first will lead to a method not allowed.
+  Neither case of index() is triggered when we're redirected to "/".
+  What we want right now is to figure out when redirecting to "/" will
+  actually cause something to happen.
+  Does that imply that render template has to be called first, and then
+  after that, the redirect might be feasible?
+  What if we have a button to redirect after we are logged in.
+  "John is logged in" followed by button that calls the function redirect()
+  again, and this time it shows the user is logged in on the homepage as well?
+* 
 -----------------------------------------------------------------------
 
+NOTES:
+* Method not allowed error happens when you call or try to redirect to a
+  new function with POST, when that function does not have POST as a method.
+* We didn't really need complex orders with rendering the template, and then a
+  button or stuff like that, just make sure everything links together in a
+  comprehensive and clear order. We were just thrown off by the method not
+  allowed error in class.
+* There is a lot to watch out for with possible user input that could mess up
+  the code, such as typing in the url and going back and forth in the url in a weird
+  way, so it was fun to find those possibilities and guard for them (The code and
+  how it works for these cases is noted in greater detail in app.py)
+* Something we found to watch out for was when copying the code for the forms from
+  html file to html file, keep an eye on what "form action" is set to, since it was the
+  cause of a few annoyances that are relatively easy to miss.
+* To check if a particular button/form submitted the information, you can write
+  "if request.form.get("nameOfForm") is not None" which checks that the info submitted by
+  the form with the particular name you give in the parantheses exists, with a name that you should have
+  assigned to the form in the html code. This allows form multiple buttons with
+  different functionalities.
+* "redirect(url_for(x))", x should be the function's name
+* "session.pop('username', None)", the 2nd argument "None" is a given value that it
+  will return if 'username' is not in session. If the second argument is not
+  there it will cause an error.
+* Going to be long but here goes, when I was trying to get 2 buttons to work with different inputs,
+  which was the logout page having a "go back" and a "logout" functionality, one of my solutions was
+  to have the action of the form "go back" to send a request to "/response", basically
+  making "form action="/reponse" " for the button to go back and "form action="/logout" "
+  for the one to logout. HOWEVER, when you send the request with POST to response, there was already
+  the if statement which would send you back to the logout page. So I changed it to send the request
+  to response using GET, which would cause default behavior, loading the response page, which worked
+  as intended. I was simply not a fan of having the info in the url, so I searched for a way to
+  differentiate between the buttons since I wanted to use POST for both.
+*
 
 Q/C/C:
-*
-*
+* So de we have to take extra steps to use cookies in our code? There is a big comment in
+  app.py that talks about it, but basically we tried to use "print(request.cookies.get('username'))",
+  because we thought that request.cookies.get was equivalent to request.form, based on the notes,
+  however, this prints "None". Perhaps the notes implied that by function it would be the same but
+  maybe there are extra steps to set up the cookies?
+* Is there a cleaner way to differentiate input from multiple buttons/forms compared to the way
+  we did it as shown in the code and the above NOTES?
+* If we are on the response page and we quit running in Flask console, why does it still
+  put up the same page, with the same username? Is that what the cookies are, like it saves on the
+  local machine until we run the code again, and then it puts the data back into session?
+* Based on above bullet point, is there a function for procedure to run upon ending
+  the flask session, so it could pop user data for instance?
 *
 -----------------------------------------------------------------------
 
 
 OTHER?
-*
-*
+* How are we going to keep data on multiple users? Right now, it's just storing one username
+  under one key "username" in session. Is there a specific way where we can keep users and their
+  passwords and other data? Or will it be storing it under augmented keys in session, like
+  "username1", and "password1" and then "username2", and "password2", and so on?
+  I think brainstorming some solutions there could be a "username1" with a given value,
+  and then a key called the value of username1, under which there could be a dictionary
+  with info like password and other information. This could help with checking if a user's
+  name is in the system by looking for it as a key, and then allowing us to
+  store a lot of data in it.
+* Based on above point, are 2D dictionaries possible in python?
+* How do cookies come into play (based on stuff in Notes)?
+* What is the function, maybe using route or maybe not, for making a custom display if
+  the user tries to enter something in the url that does not exist? Basically
+  how to make a custom 404 page?
 *
 -----------------------------------------------------------------------

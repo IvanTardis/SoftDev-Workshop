@@ -23,6 +23,8 @@ def disp_loginpage():
     # print(request.args['username'])
     # print("***DIAG: request.headers ***")
     # print(request.headers)
+    if 'username' in session:
+        retu
     return render_template( 'login.html' ) # We predict this will work, and will simply render the template login.html
 
 app.secret_key = "1234";
@@ -40,14 +42,16 @@ def authenticate():
     # print(request.args['username'])
     # print("***DIAG: request.headers ***")
     # print(request.headers)
-    session['username'] = request.args['username']
-    print(request.cookies.get('username'))
+    #session['username'] = request.args['username']
+    #print(request.cookies.get('username'))
 
     # return request.cookies.get('username')
     if request.method == 'GET':
-        return "<h2>Ivan Gontchar<br>Sky-High-Flyers (Ivan, Colyi, Jason)<br>SoftDev<br>K15 - Take & Give<br>2024-10-08<br>time spent: 1 hour</h2>HEYO!<br>You just submitted \"" + session['username'] + "\" via GET. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
+        session['username'] = request.args['username']
+        return "<h2>Ivan Gontchar<br>Belugas (Ivan, Colyi, Tanzeem)<br>SoftDev<br>K16: Take and Keep<br>2024-10-08<br>time spent: tbd</h2>HEYO!<br>You just submitted \"" + session['username'] + "\" via GET. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
     else:
-        return "<h2>Ivan Gontchar<br>Sky-High-Flyers (Ivan, Colyi, Jason)<br>SoftDev<br>K15 - Take & Give<br>2024-10-08<br>time spent: 1 hour</h2>HEYO!<br>You just submitted \"" + session['username'] + "\" via POST. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
+        session['username'] = request.form['username']
+        return "<h2>Ivan Gontchar<br>Belugas (Ivan, Colyi, Tanzeem)<br>SoftDev<br>K16: Take and Keep<br>2024-10-08<br>time spent: tbd</h2>HEYO!<br>You just submitted \"" + session['username'] + "\" via POST. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
     return "Your input: " + request.form['username'] + "<br>"  #response to a form submission
 
 

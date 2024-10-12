@@ -7,7 +7,17 @@
 
 PLAN:
 * import session, os
-*
+* Default is returning the render template which occurs when we have get.
+After default method is called, redirect might actually return something
+but as of right now, calling it first will lead to a method not allowed.
+Neither case of index() is triggered when we're redirected to "/".
+What we want right now is to figure out when redirecting to "/" will
+actually cause something to happen.
+Does that imply that render template has to be called first, and then
+after that, the redirect might be feasible?
+What if we have a button to redirect after we are logged in.
+"John is logged in" followed by button that calls the function redirect()
+again, and this time it shows the user is logged in on the homepage as well?
 *
 -----------------------------------------------------------------------
 

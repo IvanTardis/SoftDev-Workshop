@@ -3,7 +3,7 @@
   # SoftDev
   # K16: Take and Keep
   # 2024-10-09
-  # time spent: tbd
+  # time spent: 3.5 hours
 
 from flask import Flask, render_template, request, session, redirect, url_for
 

@@ -3,7 +3,7 @@
 # SoftDev
 # K16: Take and Keep
 # 2024-10-09
-# time spent: tbd
+# time spent: 3.5 hours
 
 PLAN/THOUGHTS WHILE CODING:
 * Default is returning the render template which occurs when we have get.
@@ -17,7 +17,7 @@ PLAN/THOUGHTS WHILE CODING:
   What if we have a button to redirect after we are logged in.
   "John is logged in" followed by button that calls the function redirect()
   again, and this time it shows the user is logged in on the homepage as well?
-* 
+*
 -----------------------------------------------------------------------
 
 NOTES:

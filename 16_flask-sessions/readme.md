@@ -1,11 +1,11 @@
 ## K16: Take and Keep
 ### Due: 2024-10-11f before class
 
-Your Trio Mission: 
+Your Trio Mission:
 
 _Step 0: Reform Standard Trio, debrief last work with emissary. ..._
 
-__Augment your last Flask app__ to allow a user to remain logged in until they log out. 
+__Augment your last Flask app__ to allow a user to remain logged in until they log out.
 
 PHASE 0:
 1. Map out your design changes on KtS (the paper or plastic kind).
@@ -43,4 +43,3 @@ related:
 * [tk](https://)
 
 <br>
-

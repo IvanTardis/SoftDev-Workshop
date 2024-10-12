@@ -11,14 +11,14 @@ app = Flask(__name__)    #create Flask object
 
 app.secret_key = "1234";
 
-@app.route(("/"), methods=['GET', 'POST'])
-def home():
-    if 'username' in session:
-        return "Welcome back " + session['username']
-    return "Hello Stranger."
+# @app.route(("/"), methods=['GET', 'POST'])
+# def home():
+#     if 'username' in session:
+#         return "Welcome back " + session['username']
+#     return "Hello Stranger."
 
 
-@app.route(("/login") , methods=['GET', 'POST'])
+@app.route(("/") , methods=['GET', 'POST'])
 def login():
     # right here we check if there was any submission with post
     if request.method == 'POST':
@@ -33,17 +33,26 @@ def login():
 
         #print(session['username'])
 
-        # since user inputed something, send them to the home page
-        return redirect(url_for('home'))
+        # since user inputed something, send them to the response page
+        return redirect(url_for('response'))
     # otherwise we display the login template
     return render_template( 'login.html' )
 
-@app.route("/logout")
+@app.route("/response", methods=['GET', 'POST'])
+def response():
+    return render_template( 'response.html', username = session['username'])
+
+
+@app.route("/logout", methods=['GET', 'POST'])
 def logout():
     # when the user is logging out, take their info out of the session
-    session.pop('username', None)
+    if request.method == 'POST':
+        session.pop('username', None)
+        return redirect(url_for('login'))
     # send them back to the login page
-    return redirect(url_for('login'))
+    return render_template( 'logout.html' )
+
+
 
 
 

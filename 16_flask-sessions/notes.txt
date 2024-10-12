@@ -5,8 +5,7 @@
 # 2024-10-09
 # time spent: tbd
 
-PLAN:
-* import session, os
+NOTES:
 * Default is returning the render template which occurs when we have get.
 After default method is called, redirect might actually return something
 but as of right now, calling it first will lead to a method not allowed.

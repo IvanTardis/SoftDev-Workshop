@@ -40,18 +40,25 @@ def login():
 
 @app.route("/response", methods=['GET', 'POST'])
 def response():
-    return render_template( 'response.html', username = session['username'])
-
+    if 'username' in session:
+        if request.method == 'POST':
+            return redirect(url_for('logout'))
+        return render_template( 'response.html', username = session['username'])
+    return redirect(url_for('login'))
 
 @app.route("/logout", methods=['GET', 'POST'])
 def logout():
-    # when the user is logging out, take their info out of the session
-    if request.method == 'POST':
-        session.pop('username', None)
-        return redirect(url_for('login'))
-    # send them back to the login page
-    return render_template( 'logout.html' )
-
+    if 'username' in session:
+        if request.method == 'POST':
+            if request.form.get("logout") is not None:
+                # when the user is logging out, take their info out of the session
+                session.pop('username', None)
+                return redirect(url_for('login'))
+            else:
+                return redirect(url_for('response'))
+        # send them back to the login page
+        return render_template( 'logout.html', username = session['username'])
+    return redirect(url_for('login'))
 
 
 

@@ -19,14 +19,31 @@ def home():
 
 
 @app.route(("/login") , methods=['GET', 'POST'])
-def authenticate():
+def login():
+    # right here we check if there was any submission with post
     if request.method == 'POST':
+        # putting the username into our session
         session['username'] = request.form['username']
-        print(request.cookies.get('username'))
-        print(session['username'])
+
+        # we tried this print below because we thought that request.cookies.get
+        # was equivalent to request.form, based on the notes, however, this prints
+        # "None". Perhaps the notes implied that by function it would be the same
+        # but there are extra steps to set up the cookies
+        #print(request.cookies.get('username'))
+
+        #print(session['username'])
+
+        # since user inputed something, send them to the home page
         return redirect(url_for('home'))
+    # otherwise we display the login template
     return render_template( 'login.html' )
-    # return request.cookies.get('username')
+
+@app.route("/logout")
+def logout():
+    # when the user is logging out, take their info out of the session
+    session.pop('username', None)
+    # send them back to the login page
+    return redirect(url_for('login'))
 
 
 

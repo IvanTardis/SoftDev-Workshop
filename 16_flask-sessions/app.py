@@ -5,13 +5,13 @@
   # 2024-10-09
   # time spent: tbd
 
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect, url_for
 
 app = Flask(__name__)    #create Flask object
 
 
 @app.route(("/"), methods=['GET', 'POST'])
-def disp_loginpage():
+def home():
     # print("\n\n\n")
     # print("***DIAG: this Flask obj ***")
     # print(app)
@@ -24,8 +24,9 @@ def disp_loginpage():
     # print("***DIAG: request.headers ***")
     # print(request.headers)
     if 'username' in session:
-        retu
-    return render_template( 'login.html' ) # We predict this will work, and will simply render the template login.html
+        return "Welcome back " + session['username']
+    return "Hello Stranger."
+    #return render_template( 'login.html' ) # We predict this will work, and will simply render the template login.html
 
 app.secret_key = "1234";
 
@@ -46,13 +47,16 @@ def authenticate():
     #print(request.cookies.get('username'))
 
     # return request.cookies.get('username')
-    if request.method == 'GET':
-        session['username'] = request.args['username']
-        return "<h2>Ivan Gontchar<br>Belugas (Ivan, Colyi, Tanzeem)<br>SoftDev<br>K16: Take and Keep<br>2024-10-08<br>time spent: tbd</h2>HEYO!<br>You just submitted \"" + session['username'] + "\" via GET. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
-    else:
-        session['username'] = request.form['username']
-        return "<h2>Ivan Gontchar<br>Belugas (Ivan, Colyi, Tanzeem)<br>SoftDev<br>K16: Take and Keep<br>2024-10-08<br>time spent: tbd</h2>HEYO!<br>You just submitted \"" + session['username'] + "\" via POST. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
-    return "Your input: " + request.form['username'] + "<br>"  #response to a form submission
+
+
+    
+    # if request.method == 'GET':
+    #     session['username'] = request.args['username']
+    #     return "<h2>Ivan Gontchar<br>Belugas (Ivan, Colyi, Tanzeem)<br>SoftDev<br>K16: Take and Keep<br>2024-10-08<br>time spent: tbd</h2>HEYO!<br>You just submitted \"" + session['username'] + "\" via GET. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
+    # else:
+    #     session['username'] = request.form['username']
+    #     return "<h2>Ivan Gontchar<br>Belugas (Ivan, Colyi, Tanzeem)<br>SoftDev<br>K16: Take and Keep<br>2024-10-08<br>time spent: tbd</h2>HEYO!<br>You just submitted \"" + session['username'] + "\" via POST. Nice!<br><br>GET: this means your info is in the URL and is a passed to the console as a string with a size limit.<br>POST: this means your info is sent in the background with no size limit, so it's a little more secure."
+    # return "Your input: " + request.form['username'] + "<br>"  #response to a form submission
 
 
 

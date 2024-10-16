@@ -1,0 +1,23 @@
+html {
+  font-family: "Open Sans", sans-serif;
+  background-color: #757573;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  background-color: #dbdad5;
+}
+
+.footer {
+  color: #757573;
+  text-align: right;
+  background-color: #4f4f4e;
+}
+
+ul {
+  color: white;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

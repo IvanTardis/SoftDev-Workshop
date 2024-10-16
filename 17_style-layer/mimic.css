@@ -21,6 +21,10 @@ h1 {
   width: 150px;
 }
 
+.middle {
+display: flex;
+}
+
 .main {
   margin: 0;
   padding: 0;

@@ -1,0 +1,46 @@
+/*   # Tanzeem Hasan
+  # Belugas (Ivan, Colyi, Tanzeem)
+  # SoftDev
+  # K18: Serving Looks
+  # 2024-10-16
+  # time spent: 5 mins */
+
+html {
+  font-family: "Open Sans", sans-serif;
+  background-color: #757573;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  background-color: #dbdad5;
+}
+
+.footer {
+  color: #757573;
+  text-align: right;
+  background-color: #4f4f4e;
+}
+
+.nav{
+  margin: 0;
+  padding: 0;
+  width: 150px;
+}
+
+.middle {
+display: flex;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  color: white;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+}

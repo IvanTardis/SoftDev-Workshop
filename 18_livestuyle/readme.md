@@ -1,7 +1,7 @@
 ## K18: Serving Looks
 ### Due: 2024-10-17r before class
 
-Your Trio Mission: 
+Your Trio Mission:
 
 _Step 0: Establish team comms. Fetch KtS._
 
@@ -48,4 +48,3 @@ related:
 * [...](https://www.theodysseyonline.com/walt-frazier-quotes-rhymes-new-york-knicks-fans)
 
 <br>
-

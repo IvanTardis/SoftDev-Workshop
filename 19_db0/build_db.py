@@ -14,6 +14,10 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
+with open('students.csv', newline='') as file:
+    xyz = csv.DictReader(file)
+
+print(xyz)
 
 """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

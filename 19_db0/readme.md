@@ -36,7 +36,7 @@ Specifications/Guidelines:
 * Comment liberally in-line. Speak to your future self and/or teammates.
 * Note anything notable in readme in app's root directory. (_KtS on hand always..._). Convert to markdown file if necessary.
 * _Behold! A care package awaits you. (You will need it for this...)_
-* __Use the sqlite shell__ to test SQL commands _before_ baking them into your Python script.
+* __Use the sqlite shell__ to test SQL commands _before_ baking them into your Python script. (`$ sqlite3` to launch, `Ctrl-D` to exit)
 * _Reminder:_ include heading as comment in all source files.
 <br>
 

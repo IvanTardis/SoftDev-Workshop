@@ -14,10 +14,20 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
-with open('students.csv', newline='') as file:
-    xyz = csv.DictReader(file)
+file = open('students.csv', newline='')
+xyz = csv.DictReader(file)
 
-print(xyz)
+for row in xyz:
+    print(row["name"])
+
+c.execute("CREATE TABLE students (name TEXT, age, id INTEGER PRIMARY KEY)")
+for row in xyz:
+    x = row["name"]
+    y = row["age"]
+    z = row["id"]
+    c.execute("INSERT INTO students VALUES (x, y, z)")
+
+# print(xyz)
 
 """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -25,7 +35,7 @@ print(xyz)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
+command = "SELECT * FROM students"          # test SQL stmt in sqlite3 shell, save as string
 c.execute(command)    # run SQL statement
 
 #==========================================================

@@ -2,15 +2,20 @@
 
 DISCOVERIES:
 ----------------------------------------------------
-* a thing
-* another thing
-* ...and more
+* cursor.fetchall() gets all the things that matched your previous "query"
+  which was via a command like "SELECT * FROM ..." where you select,
+  and it outputs them into tuples/lists
+*
+*
 ====================================================
 
 
 QUESTIONS/COMMENTS/CONCERNS:
 ----------------------------------------------------
-Q: a question
-Q: another question
-C: a comment or concern
+Q: Is there another way to look at the tables besides using fetchall
+   since it wasn't in the notes, and the notes said just to use
+   SELECT?
+Q: How do I use sqlite3 at home?
+C: What will running sqlite3 on a data base do in particular? Will
+   it display it, or something else?
 ====================================================

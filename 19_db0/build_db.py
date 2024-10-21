@@ -1,7 +1,9 @@
-#Clyde "Thluffy" Sinclair
-#SoftDev
-#skeleton/stub :: SQLITE3 BASICS
-#Oct 2024
+# Belugas (Ivan, Tanzeem, Colyi)
+# SoftDev
+# skeleton/stub :: SQLITE3 BASICS
+# K19: All Your Database Are Belong To Us
+# Time Spent: 1.5 hours
+# Oct 2024
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O

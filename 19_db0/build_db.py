@@ -20,15 +20,16 @@ xyz = csv.DictReader(file)
 # for row in xyz:
 #     print(row["name"])
 
-c.execute("CREATE TABLE students (name TEXT, age INTEGER, id INTEGER PRIMARY KEY)")
+c.execute("CREATE TABLE students (name TEXT, age INTEGER, id INTEGER)")
 for row in xyz:
     x = row["name"]
     y = row["age"]
     z = row["id"]
-c.execute("INSERT INTO students VALUES (\"john\", 1, 2)")
+    c.execute(f"INSERT INTO students VALUES ('{x}', {y}, {z})")
 
 # print(xyz)
-
+command = "SELECT * FROM students"          # test SQL stmt in sqlite3 shell, save as string
+c.execute(command)    # run SQL statement
 result = c.fetchall()
 
 # loop through the rows
@@ -42,8 +43,6 @@ for row in result:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
-command = "SELECT * FROM students"          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
 
 #==========================================================
 

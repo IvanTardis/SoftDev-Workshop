@@ -9,6 +9,12 @@
     <title>FD SITE</title>
   </head>
 
+  <style>
+    h1 {
+      font-size: 80px;
+    }
+  </style>
+
   <script>
     $(document).foundation();
   </script>
@@ -19,40 +25,104 @@
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
-          <h1><a href="#">Home</a></h1>
+          <h1><a href="index.html">Home</a></h1>
         </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>
 
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
-          <li><a href="#">Our Mission</a></li>
+          <li class="active"><a href="#missionstatement">Our Mission</a></li>
           <li class="has-dropdown">
             <a href="#">The Data</a>
             <ul class="dropdown">
-              <li><a href="#">First link in dropdown</a></li>
-              <li class="active"><a href="#">Active link in dropdown</a></li>
+              <li><a href="#history">History</a></li>
+              <li><a href="#new">Current Data</a></li>
             </ul>
           </li>
         </ul>
-
-        <!-- Left Nav Section -->
-        <!-- <ul class="left">
-          <li><a href="#">Left Nav Button</a></li>
-        </ul> -->
       </section>
     </nav>
     <!-- End Header and Nav -->
 
-    <div class="row">
-      <div class="text-center">
-        <h1>Is breakfast the most important meal of the day?</h1>
-    </div></div>
+      <section>
+        <div class="row">
+          <div class="text-center">
+            <h1>Is breakfast the most important meal of the day?</h1>
+        </div></div>
 
-    <div class="row">
-      <div class="large-4 columns">
-    <img src="https://img.buzzfeed.com/buzzfeed-static/static/2020-11/25/16/enhanced/3300af501692/original-423-1606323595-6.jpg">
-    </div></div>
+        <div class="row">
+          <div class="large-8 large-centered columns">
+        <img src="https://img.buzzfeed.com/buzzfeed-static/static/2020-11/25/16/enhanced/3300af501692/original-423-1606323595-6.jpg">
+        </div></div>
+
+        <br><br>
+        <section id="missionstatement">
+          <div class="row">
+            <div class="large-12 columns">
+              <p class="lead"><b>What we want to do?</b></p>
+              <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Diam pellentesque ligula per cursus litora litora velit. Pulvinar curabitur etiam est; montes iaculis donec. Metus vulputate turpis facilisi consectetur dapibus habitasse mauris pretium. Justo curabitur natoque maximus est dolor vehicula consequat et litora. Interdum orci tempor feugiat hac morbi curae faucibus in. Parturient fringilla elit nascetur feugiat, platea ullamcorper gravida. Blandit tincidunt ullamcorper elit venenatis metus accumsan.
+              Molestie suspendisse justo id tortor purus sociosqu laoreet. Dictum nulla cubilia fringilla; litora tincidunt vitae. Tortor adipiscing vitae nunc mauris placerat orci et duis in. Ornare litora proin non ultricies ut tristique urna. Maximus vulputate rutrum inceptos augue gravida. Habitant sollicitudin magnis sed convallis feugiat ornare ridiculus fames. Elit tincidunt dis pharetra facilisi curae at nibh iaculis. Elit sed magnis magnis tristique senectus aptent faucibus per mi.
+              Placerat vitae ac magna lobortis suscipit auctor consectetur curae. Tempus dui scelerisque taciti tortor natoque neque. Justo elit consequat congue sollicitudin molestie class. Quisque ex quam magnis fermentum condimentum facilisi. Montes aenean consequat luctus, nisl cursus sodales ultrices ipsum. Integer integer ante aenean in molestie iaculis.
+              </p>
+            </div>
+          </div>
+        </section>
+    </section>
+
+    <section id="history">
+
+      <br>
+      <div class="row">
+        <div class="large-6 columns">
+          <p class="lead"><b>History of Breakfast</b></p>
+          <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Diam pellentesque ligula per cursus litora litora velit. Pulvinar curabitur etiam est; montes iaculis donec. Metus vulputate turpis facilisi consectetur dapibus habitasse mauris pretium. Justo curabitur natoque maximus est dolor vehicula consequat et litora. Interdum orci tempor feugiat hac morbi curae faucibus in. Parturient fringilla elit nascetur feugiat, platea ullamcorper gravida. Blandit tincidunt ullamcorper elit venenatis metus accumsan.
+          Molestie suspendisse justo id tortor purus sociosqu laoreet. Dictum nulla cubilia fringilla; litora tincidunt vitae. Tortor adipiscing vitae nunc mauris placerat orci et duis in. Ornare litora proin non ultricies ut tristique urna. Maximus vulputate rutrum inceptos augue gravida. Habitant sollicitudin magnis sed convallis feugiat ornare ridiculus fames. Elit tincidunt dis pharetra facilisi curae at nibh iaculis. Elit sed magnis magnis tristique senectus aptent faucibus per mi.
+          Placerat vitae ac magna lobortis suscipit auctor consectetur curae. Tempus dui scelerisque taciti tortor natoque neque. Justo elit consequat congue sollicitudin molestie class. Quisque ex quam magnis fermentum condimentum facilisi. Montes aenean consequat luctus, nisl cursus sodales ultrices ipsum. Integer integer ante aenean in molestie iaculis.
+          </p>
+        </div>
+
+        <div class="large-6 columns">
+          <p class="lead"><b>The Infamous Study</b></p>
+          <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Diam pellentesque ligula per cursus litora litora velit. Pulvinar curabitur etiam est; montes iaculis donec. Metus vulputate turpis facilisi consectetur dapibus habitasse mauris pretium. Justo curabitur natoque maximus est dolor vehicula consequat et litora. Interdum orci tempor feugiat hac morbi curae faucibus in. Parturient fringilla elit nascetur feugiat, platea ullamcorper gravida. Blandit tincidunt ullamcorper elit venenatis metus accumsan.
+          Molestie suspendisse justo id tortor purus sociosqu laoreet. Dictum nulla cubilia fringilla; litora tincidunt vitae. Tortor adipiscing vitae nunc mauris placerat orci et duis in. Ornare litora proin non ultricies ut tristique urna. Maximus vulputate rutrum inceptos augue gravida. Habitant sollicitudin magnis sed convallis feugiat ornare ridiculus fames. Elit tincidunt dis pharetra facilisi curae at nibh iaculis. Elit sed magnis magnis tristique senectus aptent faucibus per mi.
+          Placerat vitae ac magna lobortis suscipit auctor consectetur curae. Tempus dui scelerisque taciti tortor natoque neque. Justo elit consequat congue sollicitudin molestie class. Quisque ex quam magnis fermentum condimentum facilisi. Montes aenean consequat luctus, nisl cursus sodales ultrices ipsum. Integer integer ante aenean in molestie iaculis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="new">
+
+      <br>
+      <div class="row">
+        <div class="large-12 columns">
+          <p class="lead"><b>Modern Studies</b></p>
+          <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Diam pellentesque ligula per cursus litora litora velit. Pulvinar curabitur etiam est; montes iaculis donec. Metus vulputate turpis facilisi consectetur dapibus habitasse mauris pretium. Justo curabitur natoque maximus est dolor vehicula consequat et litora. Interdum orci tempor feugiat hac morbi curae faucibus in. Parturient fringilla elit nascetur feugiat, platea ullamcorper gravida. Blandit tincidunt ullamcorper elit venenatis metus accumsan.
+          Molestie suspendisse justo id tortor purus sociosqu laoreet. Dictum nulla cubilia fringilla; litora tincidunt vitae. Tortor adipiscing vitae nunc mauris placerat orci et duis in. Ornare litora proin non ultricies ut tristique urna. Maximus vulputate rutrum inceptos augue gravida. Habitant sollicitudin magnis sed convallis feugiat ornare ridiculus fames. Elit tincidunt dis pharetra facilisi curae at nibh iaculis. Elit sed magnis magnis tristique senectus aptent faucibus per mi.
+          Placerat vitae ac magna lobortis suscipit auctor consectetur curae. Tempus dui scelerisque taciti tortor natoque neque. Justo elit consequat congue sollicitudin molestie class. Quisque ex quam magnis fermentum condimentum facilisi. Montes aenean consequat luctus, nisl cursus sodales ultrices ipsum. Integer integer ante aenean in molestie iaculis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr />
+        <div class="row">
+          <div class="large-6 columns">
+              <p><i>&copy; Copyrighted by NoBreakfast</i></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
 
   </body>
 </html>

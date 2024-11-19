@@ -16,7 +16,7 @@ DISCO:
 
 
 QCC:
-* how to make a sign-in form on site with foundation?
+* 
 
 Q0: 0
 

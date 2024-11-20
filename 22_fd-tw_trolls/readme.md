@@ -10,16 +10,21 @@ DISCO:
     $(document).foundation();
   </script>
 * foundation had prebuilt templates available for download
-
-
+* for foundation, we didn't notice another script statement at the bottom of the file,
+  that caused a lot of headache and unpleasantries
+*
 
 
 
 QCC:
-* 
+*
 
-Q0: 0
+Q0:
+fd: 0
+tw:
+
 
 Q0b:
 
 Q1:
+I think I prefer bootstrap, I can't define it exactly, but it seems a lot more intuitive and easier to work with. The other frameworks, though good, seemed a bit more finicky. Maybe this is a preference that will change with time as I work with one or the other, but as of right now, I just generally prefer bootstrap.

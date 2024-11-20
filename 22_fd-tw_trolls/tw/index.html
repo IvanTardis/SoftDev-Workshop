@@ -1,29 +1,150 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>TW SITE</title>
 
-    </style>
-    <style>
-      .multiline {
-        white-space:pre-wrap;
-      }
+        <style type="text/tailwindcss"></style>
 
-      .bigMargin{
-        margin-left:20px;
-      }
+        <style> 
+            .multiline {
+                white-space:pre-wrap;
+            }
 
-      }
-    </style>
+            .bigMargin{
+                margin-left:20px;
 
-    <title>TW SITE</title>
-  </head>
-
+            }
+        </style>
+    </head>
 
   <body>
+    <header>
+        <div>
+            <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button-->
+                        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                            Icon when menu is closed.
+                
+                            Menu open: "hidden", Menu closed: "block"
+                        -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+                            Icon when menu is open.
+                
+                            Menu open: "block", Menu closed: "hidden"
+                        -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                        <div class="flex shrink-0 items-center">
+                        <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                        </div>
+                        <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
+                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Our Mission</a>
+                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Research</a>
+                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Meet the Team</a>
+                    </div>
+                </div>
+            
+        </div>
+    </header>
 
-  </body>
+    <h1 class="text-1xl font-bold multiline">
+        Is breakfast the most important meal of the day?
+    </h1>
+    <br></br>
+
+    <div>
+        <p class="text-1xl multiline">
+            Breakfast Examples
+        </p>
+    </div>
+
+    <div style="margin: 40px;">
+        <div class="grid grid-flow-col grid-rows-2 grid-cols-3 gap-8">
+            <div>
+              <img src="https://images.kitchenstories.io/communityImages/f4604e05f6a9eaca99afddd69e849005_c02485d4-0841-4de6-b152-69deb38693f2.jpg" alt="" loading="lazy">
+            </div>
+            <div class="col-start-3">
+              <img src="https://www.allrecipes.com/thmb/xoeaBMOUXmsRfNG0YpO_VZdgfmU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8723684_easy-acai-smoothie-bowl_-2000-e2e893007d4d42d2b34fb753b47730f2.jpg" alt="" loading="lazy">
+            </div>
+            <div>
+              <img src="https://images.immediate.co.uk/production/volatile/sites/30/2013/05/Healthy-porridge-bowl-b1f9205.jpg?quality=90&resize=500,454" alt="" loading="lazy">
+            </div>
+            <div>
+              <img src="https://cdn.apartmenttherapy.info/image/upload/v1558442538/k/archive/28abea195aa8f053aa2efa62d074f0ef283b1c09.jpg" alt="" loading="lazy">
+            </div>
+            <div class="row-start-1 col-start-2 col-span-2">
+              <img src="https://whatsgabycooking.com/wp-content/uploads/2021/03/Land-o-Lakes-Cheddar-Chive-Biscuits-3-copy-2.jpg" alt="" loading="lazy">
+            </div>
+          </div>
+        
+        <div>
+            <p class="text-1xl multiline">
+                Colors that accompany breakfast
+            </p>
+        </div>
+
+        <div class="grid grid-cols-10 gap-2">
+            <div class="bg-sky-50 aspect-square"></div>
+            <div class="bg-sky-100 aspect-square"></div>
+            <div class="bg-sky-200 aspect-square"></div>
+            <div class="bg-sky-300 aspect-square"></div>
+            <div class="bg-sky-400 aspect-square"></div>
+            <div class="bg-sky-500 aspect-square"></div>
+            <div class="bg-sky-600 aspect-square"></div>
+            <div class="bg-sky-700 aspect-square"></div>
+            <div class="bg-sky-800 aspect-square"></div>
+            <div class="bg-sky-900 aspect-square"></div>
+        </div>
+
+        <div class="space-y-5">
+            <div class="p-3 bg-white shadow rounded-lg">
+            <h3 class="text-xs border-b">font-sans</h3>
+            <p class="font-sans">
+                Breakfast is the first meal of the day?
+            </p>
+            </div>
+            <div class="p-3 bg-white shadow rounded-lg">
+            <h3 class="text-xs border-b">font-serif</h3>
+            <p class="font-serif">
+                Breakfast is the first meal of the day?
+            </p>
+            </div>
+            <div class="p-3 bg-white shadow rounded-lg">
+            <h3 class="text-xs border-b">font-mono</h3>
+            <p class="font-mono">
+                Breakfast is the first meal of the day?
+            </p>
+            </div>
+        </div>
+    </div>
+        
+
+      
+
+
+    <!-- <p class="bigMargin">
+        <ex class ="cursor-not-allowed max-w-xs p-2 bg-red-200 text-center">Hover me last</ex>
+        <code>&lt;p class="cursor-not-allowed"&gt;</code>
+    </p> -->
+    </body>
+
 </html>

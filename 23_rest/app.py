@@ -6,6 +6,8 @@
 
 from flask import Flask, render_template, request, session, redirect, url_for
 import urllib.request
+import pprint
+import json
 
 app = Flask(__name__)    #create Flask object
 
@@ -18,3 +20,13 @@ myKey = file.readline()
 myLink = "https://api.nasa.gov/planetary/apod?api_key=" + myKey
 print(myLink)
 myURL = urllib.request.urlopen(myLink)
+print(myURL.geturl())
+# print(myURL.info())
+
+s = myURL.read()
+# print(s)
+dict = json.loads(s)
+pprint.pp(dict)
+
+imgURL = dict['url']
+print(imgURL)

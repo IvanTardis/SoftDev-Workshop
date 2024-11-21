@@ -29,4 +29,14 @@ dict = json.loads(s)
 pprint.pp(dict)
 
 imgURL = dict['url']
+description = dict['title']
 print(imgURL)
+
+@app.route(("/") , methods=['GET', 'POST'])
+def home():
+    return render_template('main.html', imgURL = imgURL, alt = description)
+
+if __name__ == "__main__": #false if this file imported as module
+    #enable debugging, auto-restarting of server when this file is modified
+    app.debug = True
+    app.run()

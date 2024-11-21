@@ -18,19 +18,19 @@ file = open("key_nasa.txt")
 myKey = file.readline()
 
 myLink = "https://api.nasa.gov/planetary/apod?api_key=" + myKey
-print(myLink)
+# print(myLink)
 myURL = urllib.request.urlopen(myLink)
-print(myURL.geturl())
+# print(myURL.geturl())
 # print(myURL.info())
 
 s = myURL.read()
 # print(s)
 dict = json.loads(s)
-pprint.pp(dict)
+# pprint.pp(dict)
 
 imgURL = dict['url']
 description = dict['title']
-print(imgURL)
+# print(imgURL)
 
 @app.route(("/") , methods=['GET', 'POST'])
 def home():

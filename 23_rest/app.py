@@ -2,7 +2,7 @@
 # SoftDev
 # K23: A RESTful Journey Skyward
 # 2024-11-20
-# time spent:
+# time spent: 30 minutes
 
 from flask import Flask, render_template, request, session, redirect, url_for
 import urllib.request

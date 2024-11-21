@@ -11,3 +11,10 @@ app = Flask(__name__)    #create Flask object
 
 # makin' a supa-secret key
 app.secret_key = "1234";
+
+file = open("key_nasa.txt")
+myKey = file.readline()
+
+myLink = "https://api.nasa.gov/planetary/apod?api_key=" + myKey
+print(myLink)
+myURL = urllib.request.urlopen(myLink)

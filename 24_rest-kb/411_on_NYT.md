@@ -24,7 +24,7 @@ The NYT developer website is fairly straightforward, and even has a "get started
   - I suggest to make one where you enable it with access for all APIs, just so you don't have too many to manage.
 
 ### Quotas:
-- The only thing you must do is set up an account, with an email(that you must confirm), First and Last name, and a password.
+- The only thing you must do is set up an account, with an email (that you must verify), First and Last name, and a password.
 
 ---
 
@@ -35,8 +35,7 @@ The NYT developer website is fairly straightforward, and even has a "get started
 - There are up to 500 requests per day, and up to 5 requests per minute, and no paid plans.
 ## The Bad:
 - I assume it is most probable that the APIs do not update very quickly in times there are rapid changes to certain information.
-- I believe there are up to 500 requests per day, and up to 5 requests per minute. A possible downside for some uses.
-- To be completely honest, not much.
+- There are up to 500 requests per day, and up to 5 requests per minute. A possible downside for some uses.
 ## The Ugly:
 - The APIs often need specifications in the url, rather than just adding you key to the base url. You often have to adjust with additional parameters such as section titles, author names, or dates. Although this may be hard to handle, if you pay attention to the documentation it should be straightforward.
 

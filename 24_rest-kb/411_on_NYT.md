@@ -21,7 +21,7 @@ The NYT developer website is fairly straightforward, and even has a "get started
 - Confirm the account from an email sent to you.
 - Explore the APIs page for all the ones you may want to use.
 - Click on your user profile in the top-right, and go to Apps. In Apps, you can create a new app, with an adequate description and title for storage.
- - I suggest to make one where you enable it with access for all APIS, just so you don't have too many to manage.
+  - I suggest to make one where you enable it with access for all APIS, just so you don't have too many to manage.
 
 ### Quotas:
 - ...

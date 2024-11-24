@@ -16,9 +16,12 @@ The NYT developer website is fairly straightforward, and even has a "get started
 
 ### Key Provisioning:     
 
-- An aspect of the process worth pointing out.
-- Another thing you’ll need to know/do to get a key.
-- ...
+- Definitely make sure to click the get started link in the top-right of the home page, because it will give a generally comprehensive set of instructions that will help will most of the steps here.
+- Sign-up for an account with your Name, email, password.
+- Confirm the account from an email sent to you.
+- Explore the APIs page for all the ones you may want to use.
+- Click on your user profile in the top-right, and go to Apps. In Apps, you can create a new app, with an adequate description and title for storage.
+ - I suggest to make one where you enable it with access for all APIS, just so you don't have too many to manage.
 
 ### Quotas:
 - ...
@@ -33,7 +36,7 @@ The NYT developer website is fairly straightforward, and even has a "get started
 - ...
 
 
-**Location:** https://
+**Location:** https://developer.nytimes.com/
 
 ---
 

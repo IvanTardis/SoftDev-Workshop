@@ -1,0 +1,162 @@
+
+Skip to content
+Navigation Menu
+
+    Copilot
+
+Copilot Chat
+Web log hosting site project structure and implementation
+Scenario Two: Your team has been contracted to create a web log hosting site, with the following features:
+
+    Users will have to register to use the site.
+    A logged-in user will be able to
+        Create a new blog
+        Update their blog by adding a new entry
+        View and edit their own past entries
+        View the blogs of other users
+
+Your "software solution," to use the parlance of our times, will incorporate a few distinct components, so it is imperative that your team develop a design before taking any further steps.
+
+Project Guidelines:
+
+    Flask will serve as your web server/delivery framework.
+    SQLite3 will serve as your backend data storage system.
+        As you grown your "sql-fu", always start with Devo Knowledge Base (QAF, n&c) and primary documentation. (...and if none of these have the answer you seek, and you find a SO post that is actually useful, or any other diamond in the rough of the Intertrash, add it to Devo KB)
+        Get creative, think boldly, get your hands dirty as you experiment via the sqlite3 shell and see what works/sticks...
+    Multiple Python files should be used, as necessary, for application layer. (a.k.a. "middleware" modules, etc.)
+
+    Reminder: include heading as comment in all source files.
+    Platinum Rule: THOUST APP SHALT NOT FAIL.
+
+Your website will incorporate a few distinct components, so it is imperative that your team develop a design and agree upon roles before you move to implementation.
+
+FINAL DELIVERABLES (watch this section for updates):
+
+    hardcopy:
+        final version of design doc (x1)
+        staple because it indicates "you have it together"
+    repo structure:
+
+app/
+    __init__.py
+    templates/
+README.md
+requirements.txt
+
+    requirements.txt
+        It will list flask as well as any other pip installs your app requires.
+        Latest version of all packages
+
+Here is a proposed project structure and initial files for your web log hosting site using Flask and SQLite3.
+Code
+
+app/
+    __init__.py
+    models.py
+    views.py
+    templates/
+        base.html
+        index.html
+        register.html
+        login.html
+        create_blog.html
+        edit_blog.html
+        view_blog.html
+README.md
+requirements.txt
+config.py
+
+Public code references from 1 repository
+
+File Contents
+app/__init__.py
+app/models.py
+Public code references from 10 repositories
+
+app/views.py
+Public code references from 25 repositories
+
+app/templates/base.html
+Public code references from 10 repositories
+
+app/templates/index.html
+Public code references from 18 repositories
+
+app/templates/register.html
+Public code references from 7 repositories
+
+app/templates/login.html
+Public code references from 11 repositories
+
+app/templates/create_blog.html
+Public code references from 7 repositories
+
+app/templates/edit_blog.html
+Public code references from 14 repositories
+
+app/templates/view_blog.html
+Public code references from 12 repositories
+
+README.md
+Public code references from 3 repositories
+
+requirements.txt
+name=requirements.txt
+
+Flask
+Flask-SQLAlchemy
+Flask-Login
+Werkzeug
+
+config.py
+Public code references from 1 repository
+
+1 vulnerability detected
+
+This provides a basic structure and initial implementation. You can expand upon this by adding more features, improving the UI, and securing the application further.
+For the requirements.txt file, please use this as a reference so I can run my virtual environment on it to install necesssary packages:
+blinker==1.8.2
+click==8.1.7
+Flask==3.0.3
+itsdangerous==2.2.0
+Jinja2==3.1.4
+MarkupSafe==2.1.5
+Werkzeug==3.0.4
+
+Sure, here is the requirements.txt file with the specified packages:
+name=requirements.txt
+
+blinker==1.8.2
+click==8.1.7
+Flask==3.0.3
+itsdangerous==2.2.0
+Jinja2==3.1.4
+MarkupSafe==2.1.5
+Werkzeug==3.0.4
+Flask-SQLAlchemy
+Flask-Login
+
+This file includes the additional necessary packages for database handling and user authentication with Flask.
+This is the error I got when I ran your code:
+Traceback (most recent call last):
+  File "/home/students/odd/2025/igontchar50/Documents/SoftDev/SoftDev-Workshop/35_mxrobbotto/__init__.py", line 10, in <module>
+    app.config.from_object('config')
+  File "/home/students/odd/2025/igontchar50/.local/lib/python3.10/site-packages/flask/config.py", line 254, in from_object
+    obj = import_string(obj)
+  File "/home/students/odd/2025/igontchar50/.local/lib/python3.10/site-packages/werkzeug/utils.py", line 596, in import_string
+    __import__(import_name)
+  File "/home/students/odd/2025/igontchar50/Documents/SoftDev/SoftDev-Workshop/35_mxrobbotto/config.py", line 11, in <module>
+    app.config.from_object(Config)
+NameError: name 'app' is not defined
+
+The error is occurring because the config.py file is trying to use app.config.from_object(Config) which should be done in the __init__.py file of the app directory, not in the config.py file itself.
+
+Here is the corrected config.py file and the __init__.py file:
+config.py
+1 vulnerability detected
+
+app/__init__.py
+
+Now, the config.py file defines the Config class without attempting to use app.config, and the __init__.py file applies the configuration to the Flask app instance. This should resolve the NameError.
+
+The error is occurring because the config.py file is trying to use app.config.from_object(Config) which should be done in the __init__.py file of the app directory, not in the config.py file itself. Here is the corrected config.py file and the __init__.py file: config.py config.py v2 """ Configuration settings for the Flask application. """ import os 1 vulnerability detected app/__init__.py app/__init__.py v2 """ Initialization of Flask app and configuration. """ from flask import Flask from flask_sqlalchemy import SQLAlchemy Now, the config.py file defines the Config class without attempting to use app.config, and the __init__.py file applies the configuration to the Flask app instance. This should resolve the NameError.

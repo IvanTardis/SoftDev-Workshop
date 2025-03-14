@@ -86,3 +86,44 @@ def view_blog(blog_id):
     blog = Blog.query.get_or_404(blog_id)
     entries = Entry.query.filter_by(blog_id=blog.id).all()
     return render_template('view_blog.html', blog=blog, entries=entries)
+
+
+@app.route('/blog/<int:blog_id>/add_entry', methods=['GET', 'POST'])
+@login_required
+def add_entry(blog_id):
+    blog = Blog.query.get_or_404(blog_id)
+
+    if blog.user_id != current_user.id:
+        flash('Access denied.', 'danger')
+        return redirect(url_for('index'))
+
+    if request.method == 'POST':
+        content = request.form['content']
+        new_entry = Entry(content=content, blog_id=blog_id)
+
+        db.session.add(new_entry)
+        db.session.commit()
+
+        flash('Entry added successfully!', 'success')
+        return redirect(url_for('view_blog', blog_id=blog_id))
+
+    return render_template('add_entry.html', blog=blog)
+
+@app.route('/entry/<int:entry_id>/edit', methods=['GET', 'POST'])
+@login_required
+def edit_entry(entry_id):
+    entry = Entry.query.get_or_404(entry_id)
+    blog = Blog.query.get(entry.blog_id)
+
+    if blog.user_id != current_user.id:
+        flash('Access denied.', 'danger')
+        return redirect(url_for('index'))
+
+    if request.method == 'POST':
+        entry.content = request.form['content']
+        db.session.commit()
+
+        flash('Entry updated successfully!', 'success')
+        return redirect(url_for('view_blog', blog_id=entry.blog_id))
+
+    return render_template('edit_entry.html', entry=entry)

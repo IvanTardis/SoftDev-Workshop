@@ -17,14 +17,25 @@ def register():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+
+        # Check if the username already exists
+        existing_user = User.query.filter_by(username=username).first()
+        if existing_user:
+            flash('Username already exists. Please choose a different one.', 'danger')
+            return redirect(url_for('register'))
+
         hashed_password = generate_password_hash(password)
 
         new_user = User(username=username, password=hashed_password)
         db.session.add(new_user)
-        db.session.commit()
-
-        flash('Registration successful!', 'success')
-        return redirect(url_for('login'))
+        try:
+            db.session.commit()
+            flash('Registration successful!', 'success')
+            return redirect(url_for('login'))
+        except IntegrityError:
+            db.session.rollback()
+            flash('An error occurred during registration. Please try again.', 'danger')
+            return redirect(url_for('register'))
 
     return render_template('register.html')
 
